@@ -8,7 +8,7 @@ namespace DevInSales.Core.Data.Mappings
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.ToTable("Autores");
+            builder.ToTable("Users");
 
             builder.HasKey(u => u.Id);
 
@@ -24,7 +24,7 @@ namespace DevInSales.Core.Data.Mappings
                 .IsUnicode(false)
                 .IsRequired();
             builder.Property(u => u.BirthDate)
-                .HasColumnType("datetime")
+                .HasColumnType("date")
                 .IsUnicode(false)
                 .IsRequired();
 
